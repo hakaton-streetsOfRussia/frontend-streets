@@ -3,60 +3,66 @@
   width: 1440px;
   height: 113px;
   margin: 0 auto;
-  align-items: center;
   position: relative;
 
-  .search_bar {
-    margin-left: 139px;
+  .ddd {
+    width: 100%;
     display: flex;
-    width: 406px;
-    height: 38px;
-    border: 1px solid #222222;
     align-items: center;
-    padding: 10px;
+    border-bottom: 1px solid black;
 
-    .form {
-      width: 100%;
+    .search_bar {
+      margin-left: 139px;
       display: flex;
-      justify-content: space-between;
+      width: 406px;
+      height: 38px;
+      border: 1px solid #222222;
+      align-items: center;
+      padding: 10px;
 
-      .search {
-        margin: 0;
-        border: none;
-        width: 386px;
-        font-size: 20px;
-        line-height: 20px;
-        color: black;
-      }
+      .form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
-      .button {
-        padding: 8px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
+        .search {
+          margin: 0;
+          border: none;
+          width: 386px;
+          font-size: 20px;
+          line-height: 20px;
+          color: black;
+        }
+
+        .button {
+          padding: 8px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+        }
       }
     }
-  }
 
-  .registration {
-    margin-left: 131px;
-    width: 261px;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #1e5b9c;
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24.2px;
-    border: none;
-  }
+    .registration {
+      margin-left: 131px;
+      width: 261px;
+      padding: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #1e5b9c;
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24.2px;
+      border: none;
+    }
 
-  .menu {
-    margin-left: 25px;
-    border: none;
-    padding: 0;
-    background-color: transparent;
+    .menu {
+      margin-left: 25px;
+      border: none;
+      padding: 0;
+      background-color: transparent;
+    }
   }
 
   .dropdownMenu {
@@ -64,7 +70,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 100%; /* Расположение сразу под шапкой */
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: white;

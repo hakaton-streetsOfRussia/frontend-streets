@@ -14,25 +14,27 @@ function AppHeader() {
 
   return (
     <header className={styles.header}>
-      <Logo />
-      <div className={styles.search_bar}>
-        <form className={styles.form}>
-          <input
-            className={styles.search}
-            type="text"
-            name="query"
-            placeholder="Выберите свой регион"
-            required
-          />
-          <button type="submit" className={styles.button}>
-            <Search />
-          </button>
-        </form>
+      <div className={styles.ddd}>
+        <Logo />
+        <div className={styles.search_bar}>
+          <form className={styles.form}>
+            <input
+              className={styles.search}
+              type="text"
+              name="query"
+              placeholder="Выберите свой регион"
+              required
+            />
+            <button type="submit" className={styles.button}>
+              <Search />
+            </button>
+          </form>
+        </div>
+        <button className={styles.registration}>Зарегистрироваться</button>
+        <button className={styles.menu} onClick={toggleMenu}>
+          {!menuVisible ? <Justify /> : <Cross />}
+        </button>
       </div>
-      <button className={styles.registration}>Зарегистрироваться</button>
-      <button className={styles.menu} onClick={toggleMenu}>
-        {!menuVisible ? <Justify /> : <Cross />}
-      </button>
       {menuVisible && (
         <nav className={styles.dropdownMenu}>
           <ul className={styles.list}>
