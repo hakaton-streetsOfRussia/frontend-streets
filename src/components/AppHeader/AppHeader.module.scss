@@ -91,6 +91,7 @@
     background-color: white;
     animation: slideDown 0.3s ease-out forwards;
     border-bottom: 1px solid black;
+    z-index: 100;
 
     .list {
       display: flex;
