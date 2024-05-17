@@ -1,9 +1,9 @@
-import React from "react";
-import style from "./style.module.scss";
-import { ReactComponent as LogoFooter } from "@/images/logo-footer.svg";
-import { ReactComponent as YouTubeFooter } from "@/images/youtube-footer.svg";
-import { ReactComponent as VKFooter } from "@/images/vk-footer.svg";
-import { ReactComponent as FooterImage } from "@/images/footer-image.svg";
+'use client'
+import FooterImage from '@/public/images/footer-image.svg'
+import LogoFooter from '@/public/images/logo-footer.svg'
+import VKFooter from '@/public/images/vk-footer.svg'
+import YouTubeFooter from '@/public/images/youtube-footer.svg'
+import style from './style.module.scss'
 
 function Footer() {
   return (
@@ -54,16 +54,13 @@ function Footer() {
           </button>
         </div>
       </div>
-      <p className={style.text}>
-        Общероссийская общественная организация уличной культуры и спорта «Улицы
-        России»
-      </p>
+      <p className={style.text}>Общероссийская общественная организация уличной культуры и спорта «Улицы России»</p>
       <p className={style.date}>2021-2024</p>
       <div className={style.image}>
         <FooterImage />
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
