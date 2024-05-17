@@ -1,6 +1,8 @@
 import AppHeader from "../AppHeader/AppHeader";
-import Footer from "../Footer";
 import { Title } from "../Title";
+import { Map } from "../Map";
+import { News } from "../News";
+import Footer from "../Footer";
 import style from "./App.module.scss";
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <AppHeader />
       <main className={style.main}>
         <Title videoUrl={"https://youtu.be/9rzrFQdE7JM"} />
+        <Map />
+        <News />
       </main>
       <Footer />
     </>
