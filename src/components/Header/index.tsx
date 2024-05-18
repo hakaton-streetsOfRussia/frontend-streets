@@ -1,18 +1,19 @@
-'use client'
-import Cross from '@/public/images/cross.svg'
-import Justify from '@/public/images/justify.svg'
-import Logo from '@/public/images/logo.svg'
-import Search from '@/public/images/search.svg'
-import Link from 'next/link'
-import { useState } from 'react'
-import styles from './style.module.scss'
+"use client";
+import Cross from "@/public/images/cross.svg";
+import Justify from "@/public/images/justify.svg";
+import Logo from "@/public/images/logo.svg";
+import Search from "@/public/images/search.svg";
+import Link from "next/link";
+import { useState } from "react";
+import styles from "./style.module.scss";
+import bg from "../../../public/images/header-bg.svg";
 
 function AppHeader() {
-  const [menuVisible, setMenuVisible] = useState<boolean>(false)
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible)
-  }
+    setMenuVisible(!menuVisible);
+  };
 
   return (
     <header className={styles.header}>
@@ -22,7 +23,13 @@ function AppHeader() {
         </div>
         <div className={styles.search_bar}>
           <form className={styles.form}>
-            <input className={styles.search} type="text" name="query" placeholder="Выберите свой регион" required />
+            <input
+              className={styles.search}
+              type="text"
+              name="query"
+              placeholder="Выберите свой регион"
+              required
+            />
             <button type="submit" className={styles.button}>
               <Search />
             </button>
@@ -59,7 +66,7 @@ function AppHeader() {
         </nav>
       )}
     </header>
-  )
+  );
 }
 
-export default AppHeader
+export default AppHeader;

@@ -1,19 +1,20 @@
 .wrapperTitle {
   background-color: #1e5b9c;
+  padding: 20px 0 20px 48px;
 
   .title {
-    margin: 20px 0 20px 48px;
+    margin: 0;
     color: white;
-    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-family: "Benzin", Arial, Helvetica, sans-serif;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
 .container {
-  background-image: url('../../../../../public/images/main-bg2.svg');
+  background-image: url(../../../../../public/images/main-bg2.svg);
   padding: 50px 50px 119px 50px;
-  font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 48px;
@@ -56,7 +57,7 @@
     .button {
       margin-top: 8px;
       width: 386px;
-      height: 78px;
+      height: 60px;
       background-color: transparent;
       border: 1px solid #222222;
       font-size: 32px;
@@ -68,11 +69,12 @@
   .news2 {
     grid-column: span 2;
     position: relative;
+    font-family: "Benzin", Arial, Helvetica, sans-serif;
 
     .photo2 {
       width: 886px;
       height: 644px;
-      background-image: url('../../../../../public/images/photonews2.png');
+      background-image: url("../../../../../public/images/photonews2.png");
     }
 
     .info {

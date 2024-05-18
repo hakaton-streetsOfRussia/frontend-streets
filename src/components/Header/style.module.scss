@@ -5,7 +5,7 @@
   margin: 0 auto;
   position: relative;
   // added arial and other as a fallback
-  font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
 
   & * {
     font-family: inherit;
@@ -59,10 +59,11 @@
     .registration {
       margin-left: 131px;
       width: 261px;
+      height: 60px;
       padding: 0;
       padding-top: 10px;
       padding-bottom: 10px;
-      background-color: #1e5b9c;
+      background-color: #6da5e1;
       color: white;
       font-size: 20px;
       font-weight: 400;
