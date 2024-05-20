@@ -1,107 +1,163 @@
-.fira-sans-thin {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Thin */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-extralight {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans ExtraLight */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-light {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Light */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-regular {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Regular */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-medium {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Medium */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-semibold {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Semibold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-bold {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Bold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-extrabold {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans ExtraBold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-black {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Black */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
-.fira-sans-thin-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* ==================ITALIC================= */
+
+/* FiraSans Thin */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-extralight-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans ExtraLight */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-ExtraLightItalic.ttf') format('truetype');
   font-weight: 200;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-light-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Light */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-regular-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Regular */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-medium-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Medium */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-semibold-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Semibold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-SemiboldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-bold-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Bold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-extrabold-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans ExtraBold */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-ExtraBoldItalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 
-.fira-sans-black-italic {
-  font-family: 'Fira Sans', sans-serif;
+/* FiraSans Black */
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./FiraSans-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
