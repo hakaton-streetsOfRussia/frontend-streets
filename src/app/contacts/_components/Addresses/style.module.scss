@@ -1,0 +1,86 @@
+.content {
+  background-image: url("../../../../../public/images/contacts-bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 46px 68px;
+
+  .title {
+    font-family: "Benzin", Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    font-weight: 500;
+    color: #222222;
+  }
+
+  .info {
+    margin-top: 68px;
+    display: flex;
+    gap: 172px;
+
+    .map {
+      width: 885px;
+      height: 544px;
+      background-color: aqua;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 116px;
+
+      .paper1,
+      .paper2,
+      .paper3 {
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+        color: #222222;
+        gap: 10px;
+
+        .contacts_title {
+          margin: 0 auto;
+          font-size: 16px;
+          font-weight: 400;
+          color: black;
+        }
+
+        .text {
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+
+      .paper1 {
+        background-image: url("../../../../../public/images/paper1.png");
+        width: 287px;
+        height: 280px;
+        padding-top: 40px;
+        box-sizing: border-box;
+
+        .text {
+          margin: 0 auto;
+        }
+      }
+      .paper2 {
+        background-image: url("../../../../../public/images/paper2.png");
+        width: 259px;
+        height: 273px;
+        position: absolute;
+        top: 245px;
+        left: 168px;
+        padding-top: 46px;
+        padding-left: 27px;
+        box-sizing: border-box;
+      }
+      .paper3 {
+        background-image: url("../../../../../public/images/paper3.png");
+        width: 294px;
+        height: 283px;
+        padding-top: 55px;
+        padding-left: 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

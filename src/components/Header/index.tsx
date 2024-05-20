@@ -1,12 +1,11 @@
 "use client";
-import Cross from "@/public/images/cross.svg";
-import Justify from "@/public/images/justify.svg";
 import Logo from "@/public/images/logo.svg";
-import Search from "@/public/images/search.svg";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./style.module.scss";
-import bg from "../../../public/images/header-bg.svg";
+import { HiBars3 } from "react-icons/hi2";
+import { TfiClose } from "react-icons/tfi";
+import { TfiSearch } from "react-icons/tfi";
 
 function AppHeader() {
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
@@ -31,13 +30,23 @@ function AppHeader() {
               required
             />
             <button type="submit" className={styles.button}>
-              <Search />
+              <TfiSearch
+                style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
+              />
             </button>
           </form>
         </div>
         <button className={styles.registration}>Зарегистрироваться</button>
         <button className={styles.menu} onClick={toggleMenu}>
-          {!menuVisible ? <Justify /> : <Cross />}
+          {!menuVisible ? (
+            <HiBars3
+              style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
+            />
+          ) : (
+            <TfiClose
+              style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
+            />
+          )}
         </button>
       </div>
       {menuVisible && (
@@ -57,10 +66,15 @@ function AppHeader() {
               <p className={styles.link}>Календарь мероприятий</p>
             </li>
             <li className={styles.list_item}>
+              <p className={styles.link}>Площадки</p>
+            </li>
+            <li className={styles.list_item}>
               <p className={styles.link}>Блог</p>
             </li>
             <li className={styles.list_item}>
-              <p className={styles.link}>Контакты</p>
+              <Link href="/contacts" className={styles.link}>
+                Контакты
+              </Link>
             </li>
           </ul>
         </nav>
