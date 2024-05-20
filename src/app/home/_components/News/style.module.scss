@@ -12,7 +12,7 @@
 }
 
 .container {
-  background-image: url("../../../../../public/images/main-bg2.png");
+  background-image: url("/images/main-bg2.png");
   padding: 50px 50px 119px 50px;
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: grid;
@@ -74,7 +74,7 @@
     .photo2 {
       width: 886px;
       height: 644px;
-      background-image: url("../../../../../public/images/photonews2.png");
+      background-image: url("/images/photonews2.png");
     }
 
     .info {

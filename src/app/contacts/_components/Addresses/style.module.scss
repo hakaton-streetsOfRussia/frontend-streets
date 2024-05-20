@@ -1,5 +1,5 @@
 .content {
-  background-image: url("../../../../../public/images/contacts-bg1.png");
+  background-image: url("/images/contacts-bg1.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 46px 68px;
@@ -19,7 +19,7 @@
     .map {
       width: 885px;
       height: 544px;
-      background-color: aqua;
+      background-image: url("/images/map-contacts.png");
     }
     .contacts {
       display: flex;
@@ -43,27 +43,35 @@
           font-size: 16px;
           font-weight: 400;
           color: black;
+          z-index: 10;
         }
 
         .text {
           font-size: 24px;
           font-weight: 500;
+          z-index: 10;
+        }
+
+        .bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
         }
       }
 
       .paper1 {
-        background-image: url("../../../../../public/images/paper1.png");
         width: 287px;
         height: 280px;
         padding-top: 40px;
         box-sizing: border-box;
+        position: relative;
 
         .text {
           margin: 0 auto;
         }
       }
       .paper2 {
-        background-image: url("../../../../../public/images/paper2.png");
         width: 259px;
         height: 273px;
         position: absolute;
@@ -72,9 +80,10 @@
         padding-top: 46px;
         padding-left: 27px;
         box-sizing: border-box;
+        z-index: 10;
       }
       .paper3 {
-        background-image: url("../../../../../public/images/paper3.png");
+        position: relative;
         width: 294px;
         height: 283px;
         padding-top: 55px;
