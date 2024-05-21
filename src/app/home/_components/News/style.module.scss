@@ -1,11 +1,11 @@
 .wrapperTitle {
-  background-color: #1e5b9c;
+  background-color: var(--siniy);
   padding: 20px 0 20px 48px;
 
   .title {
     margin: 0;
-    color: white;
-    font-family: "Benzin", Arial, Helvetica, sans-serif;
+    color: var(--belyy);
+    font-family: var(--third-family);
     font-size: 36px;
     font-weight: 500;
   }
@@ -14,7 +14,7 @@
 .container {
   background-image: url("/images/main-bg2.png");
   padding: 50px 50px 119px 50px;
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 48px;
@@ -25,10 +25,10 @@
     width: 427px;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--belyy);
     padding: 20px;
     box-sizing: border-box;
-    border: 1px solid #222222;
+    border: 1px solid var(--chernyy);
 
     .content {
       .photo {
@@ -59,7 +59,7 @@
       width: 386px;
       height: 60px;
       background-color: transparent;
-      border: 1px solid #222222;
+      border: 1px solid var(--chernyy);
       font-size: 32px;
       font-weight: 400;
       cursor: pointer;
@@ -69,7 +69,7 @@
   .news2 {
     grid-column: span 2;
     position: relative;
-    font-family: "Benzin", Arial, Helvetica, sans-serif;
+    font-family: var(--third-family);
 
     .photo2 {
       width: 886px;
@@ -89,7 +89,7 @@
       .text {
         margin: 0;
         font-size: 36px;
-        color: white;
+        color: var(--belyy);
       }
     }
 
@@ -99,7 +99,7 @@
       bottom: 62px;
       margin: 0;
       font-size: 36px;
-      color: white;
+      color: var(--belyy);
     }
   }
 }

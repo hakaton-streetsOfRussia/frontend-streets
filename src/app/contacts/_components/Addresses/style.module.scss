@@ -5,10 +5,10 @@
   padding: 100px 46px 68px;
 
   .title {
-    font-family: "Benzin", Arial, Helvetica, sans-serif;
+    font-family: var(--third-family);
     font-size: 70px;
     font-weight: 500;
-    color: #222222;
+    color: var(--chernyy);
   }
 
   .info {
@@ -34,8 +34,8 @@
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-        color: #222222;
+        font-family: var(--font-family);
+        color: var(--chernyy);
         gap: 10px;
 
         .contacts_title {
@@ -43,7 +43,7 @@
           font-size: 16px;
           font-weight: 400;
           color: black;
-          z-index: 10;
+          z-index: 9;
         }
 
         .text {

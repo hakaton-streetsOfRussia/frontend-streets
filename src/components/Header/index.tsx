@@ -3,8 +3,6 @@ import Logo from "@/public/images/logo.svg";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./style.module.scss";
-import { HiBars3 } from "react-icons/hi2";
-import { TfiClose } from "react-icons/tfi";
 import { TfiSearch } from "react-icons/tfi";
 
 function AppHeader() {
@@ -37,17 +35,19 @@ function AppHeader() {
           </form>
         </div>
         <button className={styles.registration}>Зарегистрироваться</button>
-        <button className={styles.menu} onClick={toggleMenu}>
-          {!menuVisible ? (
-            <HiBars3
-              style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
-            />
-          ) : (
-            <TfiClose
-              style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
-            />
-          )}
-        </button>
+
+        {!menuVisible ? (
+          <div onClick={toggleMenu} className={styles.burger}>
+            <span></span>
+          </div>
+        ) : (
+          <div
+            onClick={toggleMenu}
+            className={`${styles.burger} ${styles.active}`}
+          >
+            <span></span>
+          </div>
+        )}
       </div>
       {menuVisible && (
         <nav className={styles.dropdownMenu}>
@@ -69,7 +69,9 @@ function AppHeader() {
               <p className={styles.link}>Площадки</p>
             </li>
             <li className={styles.list_item}>
-              <p className={styles.link}>Блог</p>
+              <Link href="/blog" className={styles.link}>
+                Блог
+              </Link>
             </li>
             <li className={styles.list_item}>
               <Link href="/contacts" className={styles.link}>

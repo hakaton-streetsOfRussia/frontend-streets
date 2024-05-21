@@ -7,8 +7,8 @@
   margin: 0 auto;
   background-color: #222222;
   padding: 47px 48px 0;
-  color: #ffffff;
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  color: var(--belyy);
+  font-family: var(--font-family);
 
   .content {
     display: flex;
@@ -102,9 +102,9 @@
         margin-left: 35px;
         width: 261px;
         height: 60px;
-        background-color: #b73a34;
+        background-color: var(--krasnyy);
         border: none;
-        color: #ffffff;
+        color: var(--belyy);
         font-size: 20px;
         font-weight: 500;
       }
