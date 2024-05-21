@@ -1,14 +1,50 @@
 'use client'
 import BackgroundImg from '@/public/images/desciplines_bg.jpg'
-import StreetArtDemoPath from '@/public/images/street-art-demo.jpg'
+import Arrow from '@/public/images/street-art/nav-arrow.svg'
+import StreetArt2 from '@/public/images/street-art/street-art-2.jpg'
+import StreetArt3 from '@/public/images/street-art/street-art-3.jpg'
+import StreetArt4 from '@/public/images/street-art/street-art-4.jpg'
+import StreetArt5 from '@/public/images/street-art/street-art-5.jpg'
+import StreetArtDemoPath from '@/public/images/street-art/street-art-demo.jpg'
+
+import { DropDownContent } from '@/src/components/DropDownContent'
+import { possibleDisciplines } from '@/src/utils/variables'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Marquee from 'react-fast-marquee'
 import style from './style.module.scss'
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
 export default function Disciplines() {
+  //drop down logic
+  const [dropDownIsOpened, setDropDownIsOpened] = useState(false)
+  const [disciplinesIndex, setDisciplinesIndex] = useState(0)
+
+  //slides logic
+  const sliderWrapperRef = useRef<HTMLDivElement>(null)
+  const slidesRef = useRef<HTMLDivElement[]>([])
+  const [activeSlide, setActiveSlide] = useState(0)
+  const increaseActiveSlide = useCallback(() => {
+    setActiveSlide((prev) => (prev + 1 >= slidesRef.current.length ? 0 : prev + 1))
+  }, [setActiveSlide])
+  const decreaseActiveSlide = useCallback(() => {
+    setActiveSlide((prev) => (prev - 1 < 0 ? slidesRef.current.length - 1 : prev - 1))
+  }, [setActiveSlide])
+
+  //on active slide change
+  useEffect(() => {
+    if (!sliderWrapperRef.current) return
+    const slides = slidesRef.current
+    sliderWrapperRef.current.scrollTo({ left: slides[activeSlide].offsetLeft, behavior: 'smooth' })
+  }, [activeSlide])
+
+  const setUpSliderRef = useCallback(
+    (elem: HTMLDivElement | null) => {
+      if (elem != null) slidesRef.current.push(elem)
+    },
+    [slidesRef]
+  )
   const videoWrapperRef = useRef<HTMLDivElement>(null)
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 })
   useEffect(() => {
@@ -19,7 +55,15 @@ export default function Disciplines() {
     <main className={style.main}>
       <Image fill style={{ zIndex: -1 }} src={BackgroundImg} alt="concrete" />
       <h2 className={style.title}>Дисциплины</h2>
-      <button>Street Art</button>
+      <button type="button" className={style.dropDownButton} onClick={() => setDropDownIsOpened((prev) => !prev)}>
+        {possibleDisciplines[disciplinesIndex].label}
+        <DropDownContent
+          options={possibleDisciplines}
+          setterFunction={setDisciplinesIndex}
+          activeIndex={disciplinesIndex}
+          isOpened={dropDownIsOpened}
+        />
+      </button>
       <div className={style.demoWrapper}>
         <div className={style.textWrapper}>
           <p>
@@ -52,6 +96,21 @@ export default function Disciplines() {
         <Marquee>
           <span className={style.runningLine}># Улицы России # Улицы начинаются с тебя # Город # Мы # Дружба </span>
         </Marquee>
+      </div>
+      <div className={style.sliderWrapper} ref={sliderWrapperRef}>
+        <Image className={style.slideImage} ref={setUpSliderRef} src={StreetArtDemoPath} alt="art on wall" />
+        <Image className={style.slideImage} ref={setUpSliderRef} src={StreetArt2} alt="art on house" />
+        <Image className={style.slideImage} ref={setUpSliderRef} src={StreetArt3} alt="art on wall" />
+        <Image className={style.slideImage} ref={setUpSliderRef} src={StreetArt4} alt="art under bridge" />
+        <Image className={style.slideImage} ref={setUpSliderRef} src={StreetArt5} alt="abstract art" />
+      </div>
+      <div className={style.sliderButtons}>
+        <button type="button" className={style.sliderButton} onClick={decreaseActiveSlide}>
+          <Arrow style={{ rotate: '180deg' }} />
+        </button>
+        <button type="button" className={style.sliderButton} onClick={increaseActiveSlide}>
+          <Arrow />
+        </button>
       </div>
     </main>
   )
