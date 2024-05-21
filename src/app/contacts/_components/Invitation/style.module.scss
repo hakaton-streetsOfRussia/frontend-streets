@@ -1,11 +1,11 @@
 .wrapperTitle {
-  background-color: #b73a34;
+  background-color: var(--krasnyy);
   padding: 20px 0 20px 48px;
 
   .title {
     margin: 0;
-    color: white;
-    font-family: "Benzin", Arial, Helvetica, sans-serif;
+    color: var(--belyy);
+    font-family: var(--third-family);
     font-size: 36px;
     font-weight: 500;
   }
@@ -14,7 +14,7 @@
 .container {
   background-image: url("/images/contacts-bg3.png");
   padding: 48px 33px 68px 48px;
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 
   .title {
     width: 493px;
@@ -22,7 +22,7 @@
     font-size: 48px;
     font-weight: 400;
     text-align: center;
-    color: #222222;
+    color: var(--chernyy);
   }
 
   .content {
@@ -50,8 +50,8 @@
         margin-top: 8px;
         width: 386px;
         height: 78px;
-        background-color: white;
-        border: 1px solid #222222;
+        background-color: var(--belyy);
+        border: 1px solid var(--chernyy);
         font-size: 32px;
         font-weight: 400;
         cursor: pointer;
