@@ -63,7 +63,9 @@ function AppHeader() {
               </Link>
             </li>
             <li className={styles.list_item}>
-              <p className={styles.link}>Календарь мероприятий</p>
+              <Link href="/calendar" className={styles.link}>
+                Календарь мероприятий
+              </Link>
             </li>
             <li className={styles.list_item}>
               <p className={styles.link}>Площадки</p>

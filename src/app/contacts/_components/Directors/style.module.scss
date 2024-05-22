@@ -12,7 +12,7 @@
 }
 
 .container {
-  background-image: url("/images/contacts-bg2.png");
+  background-image: url("/images/contacts/contacts-bg2.png");
   display: flex;
   gap: 32px;
   padding: 48px 46px 68px;
@@ -36,6 +36,7 @@
       margin-top: 8px;
       font-size: 20px;
       font-weight: 400;
+      min-height: 72px;
     }
     .mail {
       margin-top: 16px;

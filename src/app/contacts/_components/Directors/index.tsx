@@ -14,7 +14,7 @@ export const Directors = () => {
           <div className={style.content}>
             <Image
               className={style.photo}
-              src="/images/contacts1.png"
+              src="/images/contacts/contacts1.png"
               alt="photo"
               width="386"
               height="282"
@@ -36,7 +36,7 @@ export const Directors = () => {
           <div className={style.content}>
             <Image
               className={style.photo}
-              src="/images/contacts2.png"
+              src="/images/contacts/contacts2.png"
               alt="photo"
               width="386"
               height="282"
@@ -58,7 +58,7 @@ export const Directors = () => {
           <div className={style.content}>
             <Image
               className={style.photo}
-              src="/images/contacts3.png"
+              src="/images/contacts/contacts3.png"
               alt="photo"
               width="386"
               height="282"

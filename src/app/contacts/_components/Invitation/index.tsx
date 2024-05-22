@@ -26,7 +26,7 @@ export const Invitation = () => {
           </div>
           <Image
             className={style.photo}
-            src="/images/morephotos.svg"
+            src="/images/contacts/morephotos.svg"
             alt="photo"
             width="843"
             height="608"
