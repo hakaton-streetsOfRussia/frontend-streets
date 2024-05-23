@@ -14,6 +14,11 @@ const nextConfig = {
         destination: '/home',
         permanent: true,
       },
+      {
+        source: '/disciplines',
+        destination: '/disciplines/street-art',
+        permanent: true,
+      },
     ]
   },
 }
