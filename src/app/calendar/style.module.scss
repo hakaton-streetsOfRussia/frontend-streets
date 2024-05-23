@@ -1,5 +1,5 @@
 .main {
-  padding: 36px 48px 60px 48px;
+  padding: 72px 48px 60px 48px;
   background-image: url("/images/calendar/calendar-bg.png");
 
   .title {
@@ -21,6 +21,27 @@
         height: 409px;
         padding: 24px 23px;
         box-sizing: border-box;
+      }
+
+      .dropdownmenu {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+    .events {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .event {
+        width: 885px;
+        height: 321px;
+        padding: 24px;
+        box-sizing: border-box;
+        background-color: var(--belyy);
       }
     }
   }
