@@ -1,5 +1,5 @@
 'use client'
-import Arrow from '@/public/images/street-art/nav-arrow.svg'
+import Arrow from '@/public/images/disciplines/nav-arrow.svg'
 import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'

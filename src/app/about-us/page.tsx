@@ -1,7 +1,7 @@
 'use client'
 import smallMap from '@/public/images/about-us/smallMap.jpg'
 import smallestMap from '@/public/images/about-us/smallestMap.jpg'
-import Arrow from '@/public/images/street-art/nav-arrow.svg'
+import Arrow from '@/public/images/disciplines/nav-arrow.svg'
 import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'

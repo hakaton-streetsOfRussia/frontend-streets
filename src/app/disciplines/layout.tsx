@@ -1,4 +1,4 @@
-import BackgroundImg from '@/public/images/desciplines_bg.jpg'
+import BackgroundImg from '@/public/images/disciplines/disciplines_bg.jpg'
 import Image from 'next/image'
 import { DisciplinesHead } from './_head'
 
