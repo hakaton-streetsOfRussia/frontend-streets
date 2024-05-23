@@ -1,5 +1,5 @@
-import StreetArtDemoPath from '@/public/images/street-art/street-art-demo.jpg'
-import { DisciplinePageSkeleton } from '../_page-skeleton'
+import StreetArtDemoPath from '@/public/images/disciplines/street-art/street-art-demo.jpg'
+import { DisciplinePageSkeleton } from '../_components/_page-skeleton'
 
 import StreetArt2 from '@/public/images/disciplines/street-art/street-art-2.jpg'
 import StreetArt3 from '@/public/images/disciplines/street-art/street-art-3.jpg'

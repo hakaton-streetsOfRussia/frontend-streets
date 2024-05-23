@@ -1,5 +1,5 @@
 $mainPadding: 48px;
-.main {
+.wrapper {
   padding-left: $mainPadding;
   padding-right: $mainPadding;
   position: relative;
@@ -34,4 +34,6 @@ $mainPadding: 48px;
   text-align: left;
 
   text-transform: uppercase;
+
+  cursor: pointer;
 }

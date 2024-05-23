@@ -1,4 +1,4 @@
-import { DisciplinePageSkeleton } from '../_page-skeleton'
+import { DisciplinePageSkeleton } from '../_components/_page-skeleton'
 
 import img2 from '@/public/images/disciplines/parkour/9JxN83iHgEo 1-1.jpg'
 import img1 from '@/public/images/disciplines/parkour/9JxN83iHgEo 1-2.jpg'

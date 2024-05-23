@@ -28,7 +28,7 @@ export const DisciplinesHead = () => {
   }
 
   return (
-    <div className={style.main}>
+    <div className={style.wrapper}>
       <h2 className={style.title}>Дисциплины</h2>
       <button type="button" className={style.dropDownButton} onClick={() => setDropDownIsOpened((prev) => !prev)}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

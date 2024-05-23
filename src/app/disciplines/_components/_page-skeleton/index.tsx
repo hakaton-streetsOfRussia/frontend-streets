@@ -47,13 +47,6 @@ export const DisciplinePageSkeleton = ({ titleText, titleImagePath, videoUrl, im
     return res
   }
 
-  //videoUrl logic
-  const videoWrapperRef = useRef<HTMLDivElement>(null)
-  const [videoSize, setVideoSize] = useState({ width: 0, height: 0 })
-  useEffect(() => {
-    if (!videoWrapperRef.current) return
-    setVideoSize({ width: videoWrapperRef.current.offsetWidth, height: videoWrapperRef.current.offsetHeight })
-  }, [videoWrapperRef])
   return (
     <main className={style.main}>
       <div className={style.demoWrapper}>
@@ -67,18 +60,10 @@ export const DisciplinePageSkeleton = ({ titleText, titleImagePath, videoUrl, im
         <Image src={titleImagePath} alt="demo" />
       </div>
       <div className={style.line} />
-      <div className={style.videoWrapper} ref={videoWrapperRef}>
-        <ReactPlayer
-          url={videoUrl}
-          width={videoSize.width}
-          height={videoSize.height}
-          autoPlay
-          loop
-          controls={false}
-          playing={true}
-          volume={0}
-          muted={true}
-        />
+      <div className={style.center}>
+        <div className={style.videoWrapper}>
+          <ReactPlayer url={videoUrl} width="100%" height="100%" autoPlay loop controls={false} playing={true} volume={0} muted={true} />
+        </div>
       </div>
       <div className={style.lineWrapper}>
         <Marquee>

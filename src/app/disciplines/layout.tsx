@@ -1,6 +1,6 @@
 import BackgroundImg from '@/public/images/disciplines/disciplines_bg.jpg'
 import Image from 'next/image'
-import { DisciplinesHead } from './_head'
+import { DisciplinesHead } from './_components/_head'
 
 export const metadata = {
   title: 'Streets of Russia',
@@ -11,7 +11,7 @@ export default function DisciplinesLayout({ children }: { children: React.ReactN
   return (
     <>
       <div style={{ position: 'relative' }}>
-        <Image fill style={{ zIndex: -1 }} src={BackgroundImg} alt="concrete" />
+        <Image fill style={{ zIndex: -1 }} src={BackgroundImg} alt="concrete" priority />
         <DisciplinesHead />
         {children}
       </div>

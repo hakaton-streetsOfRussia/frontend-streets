@@ -3,7 +3,6 @@ $mainPadding: 48px;
   padding-left: $mainPadding;
   padding-right: $mainPadding;
   position: relative;
-  margin-top: 48px;
 }
 
 .title {
@@ -65,11 +64,18 @@ $mainPadding: 48px;
   background-color: var(--chernyy);
   margin-bottom: 69px;
   margin-left: -$mainPadding;
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .videoWrapper {
   margin-bottom: 68px;
-  height: 751px;
+  height: 758px;
   box-sizing: border-box;
 }
 
