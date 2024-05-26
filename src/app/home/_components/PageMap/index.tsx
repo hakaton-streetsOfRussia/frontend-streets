@@ -1,5 +1,5 @@
 'use client'
-import mapBg from '@/public/images/mapBg.jpg'
+import mapBg from '@/public/images/home/mapBg.jpg'
 import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { SvgMap } from './map'
