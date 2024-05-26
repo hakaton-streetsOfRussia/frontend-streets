@@ -9,7 +9,7 @@ export const Addresses = () => {
         <div className={style.contacts}>
           <div className={style.paper1}>
             <Image
-              src="/images/paper1.svg"
+              src="/images/contacts/paper1.svg"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -23,7 +23,7 @@ export const Addresses = () => {
           </div>
           <div className={style.paper2}>
             <Image
-              src="/images/paper2.svg"
+              src="/images/contacts/paper2.svg"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -35,7 +35,7 @@ export const Addresses = () => {
           </div>
           <div className={style.paper3}>
             <Image
-              src="/images/paper3.svg"
+              src="/images/contacts/paper3.svg"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -48,7 +48,16 @@ export const Addresses = () => {
             </p>
           </div>
         </div>
-        <div className={style.map}></div>
+        <div className={style.map}>
+          <div className={style.location}>
+            <Image
+              src="/images/contacts/loca.svg"
+              alt="icon lication"
+              width="31"
+              height="35"
+            ></Image>
+          </div>
+        </div>
       </div>
     </div>
   );
