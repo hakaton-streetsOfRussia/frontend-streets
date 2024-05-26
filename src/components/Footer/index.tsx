@@ -1,9 +1,10 @@
-'use client'
-import FooterImage from '@/public/images/footer-image.svg'
-import LogoFooter from '@/public/images/logo-footer.svg'
-import VKFooter from '@/public/images/vk-footer.svg'
-import YouTubeFooter from '@/public/images/youtube-footer.svg'
-import style from './style.module.scss'
+"use client";
+import FooterImage from "@/public/images/footer-image.svg";
+import LogoFooter from "@/public/images/logo-footer.svg";
+import VKFooter from "@/public/images/vk-footer.svg";
+import YouTubeFooter from "@/public/images/youtube-footer.svg";
+import style from "./style.module.scss";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -30,19 +31,29 @@ function Footer() {
           <nav className={style.nav}>
             <ul className={style.list}>
               <li className={style.list_item}>
-                <p className={style.link}>О нас</p>
+                <Link href="/about-us" className={style.link}>
+                  О нас
+                </Link>
               </li>
               <li className={style.list_item}>
-                <p className={style.link}>Дисциплины</p>
+                <Link href="/disciplines" className={style.link}>
+                  Дисциплины
+                </Link>
               </li>
               <li className={style.list_item}>
-                <p className={style.link}>Календарь мероприятий</p>
+                <Link href="/calendar" className={style.link}>
+                  Календарь мероприятий
+                </Link>
               </li>
               <li className={style.list_item}>
-                <p className={style.link}>Блог</p>
+                <Link href="/blog" className={style.link}>
+                  Блог
+                </Link>
               </li>
               <li className={style.list_item}>
-                <p className={style.link}>Контакты</p>
+                <Link href="/contacts" className={style.link}>
+                  Контакты
+                </Link>
               </li>
             </ul>
           </nav>
@@ -54,13 +65,16 @@ function Footer() {
           </button>
         </div>
       </div>
-      <p className={style.text}>Общероссийская общественная организация уличной культуры и спорта «Улицы России»</p>
+      <p className={style.text}>
+        Общероссийская общественная организация уличной культуры и спорта «Улицы
+        России»
+      </p>
       <p className={style.date}>2021-2024</p>
       <div className={style.image}>
         <FooterImage />
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
