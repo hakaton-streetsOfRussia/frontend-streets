@@ -1,6 +1,7 @@
 'use client'
 import mapBg from '@/public/images/home/mapBg.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { SvgMap } from './map'
 import style from './style.module.scss'
@@ -42,7 +43,10 @@ export const PageMap = () => {
     (e: MouseEvent) => {
       if (!contentRef.current || !floatingRef.current) return
       const { left, top } = contentRef.current!.getBoundingClientRect()
-      setCursorPos({ x: e.clientX - left - floatingRef.current!.offsetWidth / 2, y: e.clientY - top + 40 })
+      setCursorPos({
+        x: e.clientX - left - floatingRef.current!.offsetWidth / 2,
+        y: e.clientY - top + 40,
+      })
     },
     [contentRef, floatingRef]
   )
@@ -59,6 +63,21 @@ export const PageMap = () => {
 
   return (
     <div className={style.content} ref={contentRef}>
+      <div className={style.paper}>
+        <Image src="/images/home/paper.svg" layout="fill" objectFit="cover" quality={100} alt="paper" className="bg"></Image>
+        <div className={style.links}>
+          <button className={style.button}>Вступить в организацию</button>
+          <Link className={style.link} href="/contacts">
+            Команда региона
+          </Link>
+          <Link className={style.link} href="/calendar">
+            Мероприятия
+          </Link>
+          <Link className={style.link} href="#">
+            Новости
+          </Link>
+        </div>
+      </div>
       <div className={style.mapWrapper}>
         <SvgMap />
         <div className={style.mapBgWrapper}>

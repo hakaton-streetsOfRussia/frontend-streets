@@ -5,7 +5,7 @@ import yandexIcon from '@/public/images/home/yandexIcon.png'
 import Logo from '@/public/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { IoIosArrowRoundBack } from 'react-icons/io'
 import { TfiSearch } from 'react-icons/tfi'
@@ -15,6 +15,9 @@ function AppHeader() {
   const [menuVisible, setMenuVisible] = useState<boolean>(false)
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
   const router = useRouter()
+  const pathname = usePathname()
+
+  const isActive = (path: string) => pathname.startsWith(path)
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible)
@@ -52,17 +55,17 @@ function AppHeader() {
         <nav className={styles.dropdownMenu}>
           <ul className={styles.list}>
             <li className={styles.list_item}>
-              <Link href="/about-us" className={styles.link}>
+              <Link href="/about-us" className={isActive('/about-us') ? styles.linkactive : styles.link}>
                 О нас
               </Link>
             </li>
             <li className={styles.list_item}>
-              <Link href="/disciplines" className={styles.link}>
+              <Link href="/disciplines" className={isActive('/disciplines') ? styles.linkactive : styles.link}>
                 Дисциплины
               </Link>
             </li>
             <li className={styles.list_item}>
-              <Link href="/calendar" className={styles.link}>
+              <Link href="/calendar" className={isActive('/calendar') ? styles.linkactive : styles.link}>
                 Календарь мероприятий
               </Link>
             </li>
@@ -70,12 +73,12 @@ function AppHeader() {
               <p className={styles.link}>Площадки</p>
             </li>
             <li className={styles.list_item}>
-              <Link href="/blog" className={styles.link}>
+              <Link href="/blog" className={isActive('/blog') ? styles.linkactive : styles.link}>
                 Блог
               </Link>
             </li>
             <li className={styles.list_item}>
-              <Link href="/contacts" className={styles.link}>
+              <Link href="/contacts" className={isActive('/contacts') ? styles.linkactive : styles.link}>
                 Контакты
               </Link>
             </li>

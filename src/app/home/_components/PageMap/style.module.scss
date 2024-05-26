@@ -1,6 +1,60 @@
 .content {
   background-image: url('/images/home/main-bg1.png');
   position: relative;
+  background-size: cover;
+
+  .paper {
+    width: 361px;
+    height: 370px;
+    margin-left: 26px;
+    position: relative;
+
+    font-family: var(--font-family);
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -5;
+    }
+    .links {
+      width: 260px;
+      margin-left: 47px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      z-index: 5;
+      position: relative;
+
+      .button {
+        margin-top: 54px;
+        width: 261px;
+        height: 60px;
+        background-color: var(--akcentnyy-cvet-defauit);
+        color: var(--belyy);
+        border: none;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .button:hover {
+        color: var(--krasnyy);
+      }
+
+      .link {
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--chernyy);
+        text-align: center;
+      }
+
+      .link:hover {
+        color: var(--krasnyy);
+      }
+    }
+  }
 }
 
 .floatingName {
