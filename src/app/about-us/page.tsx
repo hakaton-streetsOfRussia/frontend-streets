@@ -2,57 +2,28 @@
 import BottomContentBackground from '@/public/images/about-us/BottomContentBg.jpg'
 import TopContentBackground from '@/public/images/about-us/TopContentBg.jpg'
 import secondSmallMap from '@/public/images/about-us/secondSmallMap.jpg'
-import Arrow from '@/public/images/about-us/smallArrow.svg'
 import smallLogo from '@/public/images/about-us/smallLogo.png'
 import smallMap from '@/public/images/about-us/smallMap.jpg'
 import smallestMap from '@/public/images/about-us/smallestMap.jpg'
 import stolpsBg from '@/public/images/about-us/stolpsBg.png'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { v4 } from 'uuid'
+import { AboutUsSlider } from './_components/slider'
 import style from './style.module.scss'
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
-const blog1Content = ` Два потока всероссийской образовательной программы «Менеджер улиц», включающей в себя 3 месяца обучения по трём модулям «Личность», «Команда», «Сообщество». В курсе приняло участие более 500 участников, 30 получили дипломы.`
-
-const blog2Content = `2 сезона обучающего курса «Менеджер уличного спорта» в рамках АССК.Pro. За 2 года в курсе приняли участие более 500 студентов из разных
-университетов в онлайн-этапе, более 50 — в офлайн-этапе. 3 человека прошли стажировку в организации.`
-
-const blog3Content = `2 потока обучающего марафона по социальному проектированию «Марафон  проектировщика». Более 150 человек прошли обучение, написано свыше 90 проектов, 18  из которых получили грантовую поддержку на реализацию проектов. Общая сумма  поддержки составила 12 миллионов рублей`
-
-const blog4Content = `Создана программа дополнительного профессионального образования в сфере  уличной культуры и спорта «Менеджмент уличных культур». Длительность обучения  составила 107 часов, пилотный курс прошли 10 человек`
-
-const blog5Content = `Организовано и проведено 3 всероссийских образовательных форума уличной  культуры и спорта «Улицы России», в которых было более 700 участников и 100 волонтеров`
-
-const blog6Content = `Организована и проведена стратегическая сессия для менеджеров улиц, в которой  приняли участие 50 лидеров, крупных деятелей и предпринимателей уличной куличной  культуры и спорта Российской Федерации`
+const blogContents = [
+  `Два потока всероссийской образовательной программы «Менеджер улиц», включающей в себя 3 месяца обучения по трём модулям «Личность», «Команда», «Сообщество». В курсе приняло участие более 500 участников, 30 получили дипломы.`,
+  `2 сезона обучающего курса «Менеджер уличного спорта» в рамках АССК.Pro. За 2 года в курсе приняли участие более 500 студентов из разных
+университетов в онлайн-этапе, более 50 — в офлайн-этапе. 3 человека прошли стажировку в организации.`,
+  `2 потока обучающего марафона по социальному проектированию «Марафон  проектировщика». Более 150 человек прошли обучение, написано свыше 90 проектов, 18  из которых получили грантовую поддержку на реализацию проектов. Общая сумма  поддержки составила 12 миллионов рублей`,
+  `Создана программа дополнительного профессионального образования в сфере  уличной культуры и спорта «Менеджмент уличных культур». Длительность обучения  составила 107 часов, пилотный курс прошли 10 человек`,
+  `Организовано и проведено 3 всероссийских образовательных форума уличной  культуры и спорта «Улицы России», в которых было более 700 участников и 100 волонтеров`,
+  `Организована и проведена стратегическая сессия для менеджеров улиц, в которой  приняли участие 50 лидеров, крупных деятелей и предпринимателей уличной куличной  культуры и спорта Российской Федерации`,
+]
 
 export default function AboutUs() {
-  //slides logic
-  const sliderWrapperRef = useRef<HTMLDivElement>(null)
-  const slidesRef = useRef<HTMLDivElement[]>([])
-  const [activeSlide, setActiveSlide] = useState(0)
-  const increaseActiveSlide = useCallback(() => {
-    setActiveSlide((prev) => (prev + 1 >= slidesRef.current.length ? 0 : prev + 1))
-  }, [setActiveSlide])
-  const decreaseActiveSlide = useCallback(() => {
-    setActiveSlide((prev) => (prev - 1 < 0 ? slidesRef.current.length - 1 : prev - 1))
-  }, [setActiveSlide])
-
-  const updateRef = useCallback(
-    (ref: HTMLDivElement | null, index?: number) => {
-      if (ref == null) return
-      if (index) slidesRef.current[index] = ref
-      else slidesRef.current.push(ref)
-    },
-    [slidesRef]
-  )
-
-  useEffect(() => {
-    if (!sliderWrapperRef.current) return
-    const slides = slidesRef.current
-    sliderWrapperRef.current.scrollTo({ left: slides[activeSlide].offsetLeft, behavior: 'smooth' })
-  }, [activeSlide])
-
   return (
     <main className={style.main}>
       <div className={style.topContent}>
@@ -81,48 +52,7 @@ export default function AboutUs() {
         <h3 className={style.sectionTitle} style={{ backgroundColor: '#ffffff', color: 'black' }}>
           НАШИ ЦЕННОСТИ
         </h3>
-        <div className={style.sliderWrapper} ref={sliderWrapperRef}>
-          <div className={style.sliderItem} ref={updateRef}>
-            <span className={style.sliderItemTitle}>Новаторство</span>
-            <p className={style.sliderContent}>проект “Улицы России” возник из идеи и желания создавать новое и быть полезными окружающим.</p>
-          </div>
-          <div className={style.sliderItem} ref={updateRef}>
-            <span className={style.sliderItemTitle}>Открытость</span>
-            <p className={style.sliderContent}>
-              Мы поддерживаем политику открытости и прозрачности в наших коммуникациях. Мы отвечаем за свои слова и придерживаемся информационной
-              открытости.
-            </p>
-          </div>
-          <div className={style.sliderItem} ref={updateRef}>
-            <span className={style.sliderItemTitle}>Общность</span>
-            <p className={style.sliderContent}>
-              Наши убеждения и ценности нерушимы, как настоящая семья, а комьюнити на столько сплоченное, что ты без труда можешь отправиться в гости
-              на другую часть страны и быть дома.
-            </p>
-          </div>
-          <div className={style.sliderItem} ref={updateRef}>
-            <span className={style.sliderItemTitle}>Здоровье </span>
-            <p className={style.sliderContent}>
-              Мы преследуем цель здорового развития среди уличных атлетов. В каждой дисциплине есть свои тонкости тренировочного поцессаи спртивной
-              деятельности, поэтому наша цель привить подрастающему поколению правильное отношение к себе и своему здоровью.
-            </p>
-          </div>
-          <div className={style.sliderItem} ref={updateRef}>
-            <span className={style.sliderItemTitle}>Доброжелательность</span>
-            <p className={style.sliderContent}>
-              Только по-настоящему сильным духом люди могут верить в добро и всегда на помощь приходят люди, она защищает слабых и помогают
-              нуждающимся.
-            </p>
-          </div>
-        </div>
-        <div className={style.sliderButtons}>
-          <button type="button" className={style.sliderButton} onClick={decreaseActiveSlide}>
-            <Arrow style={{ rotate: '180deg' }} />
-          </button>
-          <button type="button" className={style.sliderButton} onClick={increaseActiveSlide}>
-            <Arrow />
-          </button>
-        </div>
+        <AboutUsSlider />
       </div>
       <div className={style.midContent}>
         <Image fill src={TopContentBackground} alt="concrete" priority style={{ zIndex: -10 }} />
@@ -166,42 +96,17 @@ export default function AboutUs() {
           <Image className={style.smallMapWithText} src={smallMap} alt="map image" />
         </div>
         <div className={style.blogsWrapper}>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: 'black' }}>
-              Блог 1
-            </span>
-            <p className={style.blogContent}>{blog1Content}</p>
-          </div>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: '#1E5B9C' }}>
-              Блог 2
-            </span>
-            <p className={style.blogContent}>{blog2Content}</p>
-          </div>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: '#B73A34' }}>
-              Блог 3
-            </span>
-            <p className={style.blogContent}>{blog3Content}</p>
-          </div>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: 'black' }}>
-              Блог 4
-            </span>
-            <p className={style.blogContent}>{blog4Content}</p>
-          </div>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: '#1E5B9C' }}>
-              Блог 5
-            </span>
-            <p className={style.blogContent}>{blog5Content}</p>
-          </div>
-          <div className={style.blog}>
-            <span className={style.blogTitle} style={{ color: '#B73A34' }}>
-              Блог 6
-            </span>
-            <p className={style.blogContent}>{blog6Content}</p>
-          </div>
+          {blogContents.map((blogText, index) => {
+            const currentColor = index % 3 === 0 ? 'black' : index % 3 === 1 ? '#1E5B9C' : '#B73A34'
+            return (
+              <div className={style.blog} key={v4()}>
+                <span className={style.blogTitle} style={{ color: currentColor }}>
+                  Блог {index + 1}
+                </span>
+                <p className={style.blogContent}>{blogText}</p>
+              </div>
+            )
+          })}
         </div>
 
         <h3 className={style.sectionTitle} style={{ backgroundColor: '#B73A34', color: 'white' }}>

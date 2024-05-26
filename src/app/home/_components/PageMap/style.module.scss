@@ -1,4 +1,67 @@
 .content {
-  background-image: url("/images/main-bg1.png");
-  height: 1086px;
+  background-image: url('/images/main-bg1.png');
+  position: relative;
+}
+
+.floatingName {
+  position: absolute;
+  padding: 10px;
+  font-family: var(--font4);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--chernyy);
+  background-color: white;
+  z-index: 5;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 750px;
+  position: relative;
+}
+
+.mapBgWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-mask-image: url('/images/contr-map.svg');
+  mask-image: url('/images/contr-map.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.mapBg {
+  margin-left: 34%;
+  margin-bottom: 3%;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  fill-opacity: 0;
+}
+
+.mapGroup {
+  pointer-events: all;
+  cursor: pointer;
+
+  & path {
+    fill: white;
+    fill-opacity: 0;
+
+    stroke: white;
+    stroke-opacity: 0.5;
+    stroke-width: 2px;
+  }
+
+  &:hover path {
+    stroke: #82d9ff;
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    filter: drop-shadow(0px 0px 50px #1b5d9b);
+  }
 }
