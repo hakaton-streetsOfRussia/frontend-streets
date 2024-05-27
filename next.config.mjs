@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   webpack(config) {
     config.module.rules.push({
@@ -21,6 +24,7 @@ const nextConfig = {
       },
     ];
   },
+  basePath: isProd ? "/frontend-streets" : "",
   output: "export",
 };
 
