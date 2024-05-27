@@ -53,7 +53,9 @@ export const News = () => {
               Кубок России по BMX ритм-трек 2024 стартует в Москве
             </p>
             <p className={style.date}>10 мая 2024года</p>
-            <p className={style.place}>Москва Велодром "Марьинский"</p>
+            <p className={style.place}>
+              Москва Велодром &laquo;Марьинский&raquo;
+            </p>
           </div>
           <Barcode />
           <button type="button" className={style.button}>
