@@ -1,7 +1,7 @@
 /* FiraSans Thin */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Thin.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 /* FiraSans ExtraLight */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-ExtraLight.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 /* FiraSans Light */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Light.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 /* FiraSans Regular */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Regular.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 /* FiraSans Medium */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Medium.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 
 /* FiraSans Semibold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Semibold.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -54,8 +54,8 @@
 
 /* FiraSans Bold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Bold.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -63,8 +63,8 @@
 
 /* FiraSans ExtraBold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-ExtraBold.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -72,8 +72,8 @@
 
 /* FiraSans Black */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Black.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -83,8 +83,8 @@
 
 /* FiraSans Thin */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-ThinItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -92,8 +92,8 @@
 
 /* FiraSans ExtraLight */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-ExtraLightItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-ExtraLightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -101,8 +101,8 @@
 
 /* FiraSans Light */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-LightItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -110,8 +110,8 @@
 
 /* FiraSans Regular */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-Italic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -119,8 +119,8 @@
 
 /* FiraSans Medium */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-MediumItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -128,8 +128,8 @@
 
 /* FiraSans Semibold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-SemiboldItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-SemiboldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -137,8 +137,8 @@
 
 /* FiraSans Bold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-BoldItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -146,8 +146,8 @@
 
 /* FiraSans ExtraBold */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-ExtraBoldItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
   font-display: swap;
@@ -155,8 +155,8 @@
 
 /* FiraSans Black */
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./FiraSans-BlackItalic.ttf') format('truetype');
+  font-family: "Fira Sans";
+  src: url("/fonts/FiraSans/FiraSans-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
